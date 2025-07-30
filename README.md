@@ -2,25 +2,37 @@
 
 
 
-A Spring Boot application that manages students, courses, and departments using relational database structure.
+A Spring Boot application that manages students, courses, and departments using relational database structure and entity relationships.
 
 
 
 \## 📚 Features
 
-\- Add, view, update, and delete students, courses, and departments
 
-\- One-to-many and many-to-one relationships between entities
 
-\- RESTful APIs built with Spring Boot
+\- Add, view, update, and delete Students, Courses, and Departments
+
+\- Handles relationships:
+
+&nbsp; - Many-to-One: Students → Departments
+
+&nbsp; - One-to-Many: Departments → Students
+
+&nbsp; - Many-to-Many: Students ↔ Courses
+
+\- Uses DTOs to transfer data between layers
+
+\- RESTful APIs built using Spring Boot
 
 \- Connected to MySQL database
 
-\- Clean architecture with layered design (Controller → Service → Repository)
+\- Follows clean architecture: Controller → Service → Repository
 
 
 
 \## ⚙️ Technologies Used
+
+
 
 \- Java 21
 
@@ -38,21 +50,25 @@ A Spring Boot application that manages students, courses, and departments using 
 
 \## 🚀 How to Run
 
+
+
 1\. Clone the repository
 
-2\. Configure your MySQL `application.properties`
+2\. Configure MySQL in `application.properties`
 
-3\. Run the application from your IDE
+3\. Run the application
 
-4\. Use Postman or any REST client to test the APIs
+4\. Use Postman or any REST client to test the endpoints
 
 
 
 \## 💡 Note
 
-\- Ensure MySQL is running before launching the app.
 
-\- The database schema will be auto-created using JPA/Hibernate.
+
+\- Ensure MySQL is running before starting the app
+
+\- Database schema is auto-created using JPA/Hibernate
 
 
 
